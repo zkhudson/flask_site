@@ -4,11 +4,10 @@
 }
 
 .navbar {
-    background-color: lightslategray;
+    display: flex;
     font-size: 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    padding: 8px 5px 8px 5px;
+    color: black;
 }
 
 .navbar a {
@@ -27,26 +26,40 @@
 }
 
 .navbar-item:hover, .navbar-brand:hover {
-    background-color: darkgray;
-    border-radius: 20% 20% 5% 5%;
-
+    background-color: rgb(240, 240, 240);
   }
 
 .image-cropper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
     margin-left: 50%;
     margin-right: 50%;
+    margin-top: -20px;
 }
 
 .profile-pic {
-  display: inline-block;
+  display: block;
+  align-items: flex-start;
   margin: 0 auto;
   height: 100%;
   width: auto;
+}
+
+.social-link {
+    margin-left: 90%;
+
+}
+
+.github-logo {
+    width: 63px;
+    height: 26px;
+}
+
+.linkedin-logo {
+
 }
 
 .body-content {
