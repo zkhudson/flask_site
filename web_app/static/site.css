@@ -3,45 +3,78 @@
     color: blue;
 }
 
-.navbar {
-    display: flex;
+header, footer {
+    grid-column: 1 / 4;
+  }
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 100px 1fr 50px;
+    grid-gap: 1em;
     font-size: 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
 }
 
-.navbar a {
+.grid-layout a {
     text-decoration: none;
     color: inherit;
 }
 
-.navbar-brand {
+.navbar-item {
+    grid-row: 1;
+    grid-column: 1 / 2;
+}
+
+.navbar-item .home {
     font-size: 1.2em;
     font-weight: 600;
+    padding-right: 10px;
 }
 
-.navbar-item {
-    font-variant: small-caps;
-    margin-left: 30px;
+.navbar-item .item {
+    font-size: 1em;
+    font-weight: 400;
 }
-
-.navbar-item:hover, .navbar-brand:hover {
+.navbar-item .item:hover, .home:hover {
     background-color: rgb(240, 240, 240);
   }
 
+.left-bracket {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    justify-self: left;
+    margin: 0 auto;
+
+}
+
+.right-bracket {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    justify-self: right;
+    margin: 0 auto;
+
+}
+
 .image-cropper {
-    width: 80px;
-    height: 80px;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    width: 100px;
+    height: 100px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: -20px;
+    justify-self: center;
+
 }
 
 .profile-pic {
   display: block;
+  grid-row: 1;
+  grid-column: 2 / 3;
   align-items: flex-start;
   margin: 0 auto;
   height: 100%;
@@ -49,20 +82,33 @@
 }
 
 .social-link {
-    margin-left: 90%;
-
+    grid-row: 1;
+    grid-column: 3 / 4;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
 }
 
 .github-logo {
-    width: 63px;
-    height: 26px;
+    width: 53px;
+    height: 22px;
+    justify-self: right;
 }
 
 .linkedin-logo {
-
+    width: 56px;
+    height: 14px;
+    justify-self: left;
 }
 
 .body-content {
-    padding: 5px;
+    display: grid;    
+    grid-row: 2;
+    grid-column: 2 / 3;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+    grid-row: 3;
+    justify-self: first baseline;
 }
