@@ -42,6 +42,30 @@ header, footer {
     background-color: rgb(240, 240, 240);
 }
 
+.horizontal-line {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    width: 150px;
+    height: 2px;
+    background: rgb(49, 49, 49);
+}
+
+.left-bracket {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding-left: 20%;
+}
+
+.right-bracket {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding-left: 62%;
+}
+
 .image-cropper {
     grid-row: 1;
     grid-column: 2 / 3;
@@ -71,34 +95,6 @@ header, footer {
     justify-content: space-evenly;
     position: relative;
     overflow: hidden;
-    place-content: start;
-}
-
-.social-link i {
-    display: inline;
-}
-
-.social-link p {
-    margin: 2%;
-}
-
-.social-icons {
-    place-self: end;
-}
-
-.name {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    margin: 0%;
-}
-
-.horizontal-line {
-    grid-row: 1;
-    grid-column: 3 / 4;
-    width: 95%;
-    height: 2px;
-    background: rgb(142, 143, 146);
-    margin: 0% 0% 2% 0%;
 }
 
 .body-content {

@@ -1,0 +1,71 @@
+.message {
+    font-weight: 600;
+    color: blue;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 1em;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+}
+
+.navbar-item:hover, .navbar-brand:hover {
+    background-color: rgb(240, 240, 240);
+  }
+
+.image-cropper {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: -20px;
+}
+
+.profile-pic {
+  display: block;
+  align-items: flex-start;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.social-link {
+    margin-left: 90%;
+
+}
+
+.github-logo {
+    width: 63px;
+    height: 26px;
+}
+
+.linkedin-logo {
+
+}
+
+.body-content {
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
