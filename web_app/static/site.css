@@ -1,28 +1,30 @@
-.message {
-    font-weight: 600;
-    color: blue;
-}
-
-header, footer {
-    grid-column: 1 / 4;
-  }
-
-.header {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 6;
+header {
+    grid-row: 1;
+    grid-column: 1 / end;
     background-color: rgb(142, 143, 146);
+  }
+@media all and (max-width: 1070px) {
+    header {
+        grid-row: 1;
+        grid-column: 1 / end;
+        background-color: rgb(142, 143, 146);
+    }
 }
 
 .grid-layout {
     display: grid;
-    grid-template-columns: auto auto 8.75em;
-    grid-template-rows: 6.25em 1fr 3.125em;
-    grid-gap: 1em;
-    font-size: 1em;
+    grid-template-columns: 4% 86% 9%;
+    grid-template-rows: 6rem 1fr 3.125rem;
+    grid-gap: .2em;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     color: black;
+}
+@media all and (max-width: 1070px) {
+    .grid-layout {
+        grid-template-columns: 2% 1fr 2%;
+        grid-template-rows: 5.6rem 1fr 3.125rem;
+    }
 }
 
 .grid-layout a {
@@ -30,134 +32,290 @@ header, footer {
     color: inherit;
 }
 
-.left-sidebar {
-    grid-row-start: 1;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.article {
+    width: 100%;
+    box-shadow: 0 3px 6px #CCC, 0 3px 6px #CCC;
+    padding: 15px;
+    color: #444;
+    background: white;
+    margin: 10px;
 }
-
-nav {
-    grid-row: 1;
-    grid-column: 1 / 2;
+@media all and (max-width: 1070px) {
+    .article {
+        width: 91%;
+    }
 }
-
-nav .home {
-    font-size: 1.1em;
-    font-weight: 600;
-    padding-right: 10px;
-    padding-left: 1.5px;
-}
-
-nav .item {
-    font-size: 1em;
-}
-
-.hvr-underline-from-center {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    overflow: hidden;
-  }
-  
-.hvr-underline-from-center:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 51%;
-    right: 51%;
-    bottom: -2px;
-    background: rgb(160, 202, 7);
-    height: 4px;
-    -webkit-transition-property: left, right;
-    transition-property: left, right;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-    left: 0;
-    right: 0;
-  }
 
 .image-cropper {
     grid-row: 1;
     grid-column: 2 / 3;
-    width: 9.375em;
-    height: 9.375em;
+    width: 6.22rem;
+    height: 6.22rem;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
     justify-self: center;
-    border: 1.3px solid black;
-
+    border: solid rgb(142, 143, 146);
+}
+@media all and (max-width: 1070px) {
+    .image-cropper {
+        width: 5.62rem;
+        height: 5.62rem;
+        align-self: center;
+        justify-self: center;
+        border: solid rgb(142, 143, 146);
+    
+    }    
 }
 
 .profile-pic {
   grid-row: 1;
   grid-column: 2 / 3;
-  margin: auto;
-  height: 110%;
+  filter: brightness(1.1);
+  height: 10rem;
   width: auto;
+  margin: -8% 0% 0% -16%;
+}
+@media all and (max-width: 1070px) {
+    .profile-pic {
+        height: 9rem;
+    }
 }
 
 .social-link {
     grid-row: 1;
     grid-column: 3 / 4;
-    justify-content: space-evenly;
     position: relative;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
 }
-
-.social-link i {
-    display: inline;
-}
-
-.social-link p {
-    margin: 2% 0% 0% 0%;
+@media all and (max-width: 1070px) {
+    .social-link {
+        grid-column: 2 / 3;
+        justify-self: flex-end;
+        justify-content: space-between;
+        width: 35%;
+    }
 }
 
 .social-icons {
-    margin: 0% 0% 0% 1%;
+    display: inline-flex;
+    order: 3;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.25rem;
 }
+@media all and (max-width: 1070px) {
+    .social-icons {
+        display: flex;
+        order: 1;
+        line-height: 1;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        justify-content: space-evenly;
+        font-size: 1.65rem;
+        margin: 2% 0 0 0;
+        
+    }   
+}
+
 .name {
+    display: flex;
+    order: 1;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 2% 0% 0% 0%;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.45em;
-    margin: 0%;
+    font-size: .95rem;
+}
+@media all and (max-width: 1120px) {
+    .name {
+        font-size: .87rem;
+    }
+}
+@media all and (max-width: 1070px) {
+    .name {
+        display: none;
+    }
 }
 
 .horizontal-line {
     grid-row: 1;
     grid-column: 3 / 4;
     width: 95%;
-    height: 2px;
-    background: rgb(142, 143, 146);
-    margin: 0% 0% 2% 0%;
+    height: 1.3px;
+    background: white;
+    margin: 0% 0% 2% 3%;
+    order: 2;
+}
+@media all and (max-width: 1070px) {
+    .horizontal-line {
+        display: none;
+    }
 }
 
 .body-content {
     display: grid;    
     grid-row: 2;
     grid-column: 2 / 3;
-    padding-top: 1.5625em;
+    padding-top: 0rem;
     font-family: 'Roboto', sans-serif;
+}
+
+.body-content p {
+    overflow: hidden;
+    margin: 12px;
+}
+
+.body-content h1 {
+    margin-bottom: 10px;
 }
 
 .footer {
     grid-row: 3;
-    grid-column: 3 / 4;
-    justify-self: right;
-}
-
-.built-with {
-    grid-row: 3;
     grid-column: 2 / 3;
     font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     justify-self: center;
+}
+
+#built-logo {
+    font-size: 100%;
+}
+
+#plus-sign {
+    font-size: 75%;
+    padding: 1px;
+}
+
+/* --- Hamburger Menu Code Starts HERE ---  */
+
+.hamburger-menu {
+    display: block;
+    position: relative;
+    top: 2.2rem;
+    left: 1.9rem;
+    width: 40px;
+    height: 32px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.hamburger-menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0;
+    z-index: 2; 
+    
+    -webkit-touch-callout: none;
+  }
+  
+.hamburger-menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.hamburger-menu span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.hamburger-menu span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform hamburger slices into an X. */
+.hamburger-menu input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323; /* Menu's X color */
+}
+
+.hamburger-menu input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.hamburger-menu input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    width: 8rem;
+    margin: -6.25rem 0 0 -3.125rem;
+    padding: 3.125rem;
+    padding-top: 7.5rem;
+    
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;  /* to stop flickering of text in safari */
+    
+    transform-origin: -0% 0%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
+  }
+
+.menu li {
+    padding: 0.625rem 0;
+    font-size: 1.5rem;
+}
+
+.hamburger-menu input:checked ~ ul {
+    transform: none;
+}
+
+#menu-name {
+    display: none;
+}
+@media all and (max-width: 1070px) {
+    #menu-name {
+        font-size: 1.2rem;
+        display: inherit;
+        padding-top: 1rem;
+    }
+}
+
+/* --- Hambuger Menu code ends HERE --- */
+
+
+/* Page Body Specific Styling */
+
+
+.divider-line {     /* Page title underline */
+    width: 115px;
+    height: .2rem;
+    background: black;
+}
+
+.content h3, h4 {   /* Body header spacing, intended to stylize Work Experience headers */
+    margin-bottom: 0;
 }
