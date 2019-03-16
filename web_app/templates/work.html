@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}
+Zach Hudson
+{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<div class="divider-line"></div>
+
+<div class="content">
+{{ post.html|safe }}
+</div>
+{% endblock %}

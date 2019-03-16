@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+Zach Hudson
+{% endblock %}
+
+{% block content %}
+<h1>Blog</h1>
+<div class="divider-line"></div>
+{% if request.path == "/blog/" %}
+{% for post in posts %}
+    <article class="article">
+    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+    <h2>{{ post.title }}</h2>
+    </a>
+    <small>{{ post.date }}</small>
+    </article>
+{% endfor %}
+{% else %}
+    <h2>{{ post.title }}</h2>
+    <strong>{{ post.date }}</strong>
+    {{ post.html|safe }}
+{% endif %}
+{% endblock %}
+
+

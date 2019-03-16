@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}
+About
+{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<div class="divider-line"></div>
+{{ post.html|safe }}
+{% endblock %}
