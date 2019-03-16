@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script 
+            async src="https://www.googletagmanager.com/gtag/js?id=UA-5191034-5">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-5191034-5');
+        </script>
         <meta charset="utf-8" />
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="{{ url_for('pygments_css') }}"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Software QA, Software Developer, Machine Learning, User Experience (UX), and Apple fanboy" />
+        <meta property='og:image' content="//static/zach.jpg"/>
+        <meta property='og:description' content="Zach's little spot on the web"/>
     </head>
 
     <body>
         <div class="grid-layout">
-            <div class="header"></div>
-            <div class="left-sidebar"></div>
-            <nav>
-                <a href="{{ url_for('home') }}" class="home hvr-underline-from-center">Home</a>
-            </nav>
+           <header>
+                <nav role="navigation">
+                <div class="hamburger-menu">
+                    <input type="checkbox"/>
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul class="menu" hidden>  
+                        <p id="menu-name"><strong>Zach Hudson</strong></p>
+                        <a href="/"><li>Home</li></a>
+                        <a href="/about/"><li>About</li></a>
+                        <a href="/work/"><li>Work</li></a>
+                        <a href="/blog/"><li>Blog</li></a>
+                    </ul>
+                </div>
+                </nav>
+           </header>
 
             <div class="image-cropper">
-                <img src="{{url_for('static', filename='zach.jpg')}}" alt="Zach" class="profile-pic">
+                <img src="{{url_for('static', filename='zach.jpg')}}" alt="Zach" class="profile-pic"/>
             </div>    
             
-            <div class="social-link">
-                <i class="name">            
-                    <p><strong>Zach Hudson</strong></p>
-                </i>
-
+            <div class="social-link">   
+                <p class="name"><strong>Zach Hudson</strong></p>
+            
                 <div class="horizontal-line"></div>
                 
                 <div class="social-icons">
-                <a href="mailto:zkhudson@gmail.com">
-                    <i class="fas fa-envelope-square" style="font-size: 2rem;"></i>
+                <a href="mailto:zach@zkhudson.com">
+                    <i id="email" class="fas fa-envelope-square"></i>
                 </a>
                 
                 <a href="https://twitter.com/zkhudson">
-                    <i class="fab fa-twitter-square" style="font-size: 2rem;"></i>
+                    <i id="twitter" class="fab fa-twitter-square"></i>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/zachhudson/">
-                    <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+                    <i id="linkedin" class="fab fa-linkedin"></i>
                 </a>
                 
                 <a href="https://github.com/zkhudson">
-                    <i class="fab fa-github-square" style="font-size: 2rem;"></i>
+                    <i id="github" class="fab fa-github-square"></i>
                 </a>
                 </div>
             </div>
@@ -51,15 +79,14 @@
             </div>
             <div class="footer">
                 <footer>
-                    <p class="copyright">&copy; 2018</p>
+                    <p>
+                    <i class="fab fa-python" id="built-logo"></i>
+                    <i class="fas fa-plus" id="plus-sign"></i>
+                    <i class="fas fa-flask" id="built-logo"></i>
+                    <i class="fas fa-plus" id="plus-sign"></i>
+                    <i class="fab fa-aws" id="built-logo"></i>
+                    </p>
                 </footer>
-            </div>
-
-            <div class="built-with" style="font-size: 1.35rem;">
-                <p>
-                    <i class="fab fa-python"></i>  <i class="fas fa-plus" style="font-size: 1rem;"></i>  
-                    <i class="fas fa-flask"></i>  <i class="fas fa-plus" style="font-size: 1rem;"></i>  <i class="fab fa-aws"></i>
-                </p>
             </div>
         </div>
     </body>
