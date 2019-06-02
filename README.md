@@ -18,6 +18,7 @@ Using Homebrew (on a Mac) makes the installation process more manageable, and ke
 * Flask
 * pipenv
 * CSS @media queries
+* JavaScript functions
 * Zappa - [Serverless Python](https://github.com/Miserlou/Zappa)
 * Amazon Web Services (AWS)
     * Lambda
