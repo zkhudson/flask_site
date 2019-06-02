@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script 
-            async src="https://www.googletagmanager.com/gtag/js?id=UA-5191034-5">
-        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5191034-5"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -12,24 +10,40 @@
             gtag('config', 'UA-5191034-5');
         </script>
         <meta charset="utf-8" />
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}Zach's site: Tech, Career, Developement, QA, and more...{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="{{ url_for('pygments_css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Software QA, Software Developer, Machine Learning, User Experience (UX), and Apple fanboy" />
-        <meta property='og:image' content="//static/zach.jpg"/>
+        <meta name="description" content="Software QA, Software Developer, Machine Learning, User Experience (UX), Engineer, Apple, Product Reviews, How to Guides" />
         <meta property='og:description' content="Zach's little spot on the web"/>
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='apple-icon-57x57.png')}}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='apple-icon-60x60.png')}}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='apple-icon-72x72.png')}}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='apple-icon-76x76.png')}}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='apple-icon-114x114.png')}}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='apple-icon-120x120.png')}}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='apple-icon-144x144.png')}}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='apple-icon-152x152.png')}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-icon-180x180.png')}}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='android-icon-192x192.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon-96x96.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png')}}">
+        <link rel="manifest" href="{{ url_for('static', filename='manifest.json')}}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ url_for('static', filename='ms-icon-144x144.png')}}">
+        <meta name="theme-color" content="#ffffff">
     </head>
 
-    <body>
+    <body onload="browserCheck()">
         <div class="grid-layout">
            <header>
                 <nav role="navigation">
                 <div class="hamburger-menu">
-                    <input type="checkbox"/>
+                    <input type="checkbox" title="MENU"/>
                     
                     <span></span>
                     <span></span>
@@ -47,7 +61,9 @@
            </header>
 
             <div class="image-cropper">
+                <a href="/">
                 <img src="{{url_for('static', filename='zach.jpg')}}" alt="Zach" class="profile-pic"/>
+                </a>
             </div>    
             
             <div class="social-link">   
@@ -56,7 +72,7 @@
                 <div class="horizontal-line"></div>
                 
                 <div class="social-icons">
-                <a href="mailto:zach@zkhudson.com">
+                <a href="mailto:zach@zkhudson.com" aria-label="Email">
                     <i id="email" class="fas fa-envelope-square"></i>
                 </a>
                 
@@ -89,6 +105,7 @@
                 </footer>
             </div>
         </div>
+    <script src="{{url_for('static', filename='browserCheck.js')}}"></script>
     </body>
 </html>
 
