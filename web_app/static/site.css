@@ -27,23 +27,28 @@ header {
     }
 }
 
-.grid-layout a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .article {
     width: 100%;
     box-shadow: 0 3px 6px #CCC, 0 3px 6px #CCC;
-    padding: 15px;
+    padding: 1px 0px 1px 8px;
     color: #444;
     background: white;
-    margin: 10px;
+    margin: 5px;
 }
 @media all and (max-width: 1070px) {
     .article {
         width: 91%;
     }
+}
+
+.article a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article:active,
+.article:hover {
+    outline: solid #0070c9;
 }
 
 .image-cropper {
@@ -97,6 +102,11 @@ header {
         justify-content: space-between;
         width: 35%;
     }
+}
+
+.social-link a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .social-icons {
@@ -163,6 +173,11 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
+.body-content a {
+    text-decoration: none;
+    color: #0070c9;
+}
+
 .body-content p {
     overflow: hidden;
     margin: 12px;
@@ -189,6 +204,26 @@ header {
     padding: 1px;
 }
 
+.up-button {
+    grid-row: 3;
+    grid-column: 3 / 4;
+    flex-wrap: nowrap;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    justify-self: center;
+}
+
+.up-button a {
+        text-decoration: none;
+        color: inherit;
+}
+
+.up-button p {
+    font-size: 0.7rem;
+    justify-self: first baseline;
+    margin-top: 0;
+}
+
 /* --- Hamburger Menu Code Starts HERE ---  */
 
 .hamburger-menu {
@@ -203,6 +238,11 @@ header {
     
     -webkit-user-select: none;
     user-select: none;
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .hamburger-menu input {
